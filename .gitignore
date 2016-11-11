@@ -1,4 +1,4 @@
-#Ignore settings file and db
+# Ignore settings file and db
 
-./Piattaforma/tesi/settings.py
-./Parsing/clustering/*
+Piattaforma/tesi/settings.py
+Parsing/clustering/*
