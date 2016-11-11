@@ -124,7 +124,7 @@ class GeoCodingViewSet(viewsets.ReadOnlyModelViewSet):
         
         #Raggio espresso in kilometri
         current_radius = 0.1
-        while not check_classes(classes,streams_serializer) and current_radius < 500:
+        while not check_classes(classes,streams_serializer) and current_radius < 50:
             print "eseguo con raggio"
             print current_radius
             query = """SELECT ID, (6367*acos(cos(radians(%2f)) *cos(radians(GPS_latitude))*cos(radians(GPS_longitude)-radians(%2f))
