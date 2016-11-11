@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*8q$*_*uu^95kdr5!1p6cm&nh3$0qs*6&je_$8wg7lfy51=-0^'
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,8 +31,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-    #'django.contrib.admin',
-    #'django.contrib.sessions',
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,13 +41,7 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
 ]
 
-    #'django.contrib.sessions.middleware.SessionMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.contrib.auth.middleware.AuthenticationMiddleware',
-    #'django.middleware.security.SecurityMiddleware',
-    #'django.middleware.common.CommonMiddleware',
-    #'django.contrib.messages.middleware.MessageMiddleware',
-    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 MIDDLEWARE = [
 ]
 
@@ -79,33 +71,13 @@ WSGI_APPLICATION = 'tesi.wsgi.application'
 DATABASES = {    
     'default': {    
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sensquare',
-        'USER': 'davidek',           
-        'PASSWORD': 'tesiCRESTINI2016',
+        'NAME': '',
+        'USER': '',           
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }    
 }   
-
-
-# Password validation
-# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
-'''
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
-'''
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
