@@ -4,8 +4,9 @@
 
 ### Prerequisites
 
-- [Django-rest-framework](http://www.django-rest-framework.org/)(pip install django-rest-framework)
-- [MySql](https://www.mysql.it/)
+- [Django](https://docs.djangoproject.com/en/1.10/intro/tutorial01/) (v1.10.2)
+- [Django-rest-framework](http://www.django-rest-framework.org/) (v3.5.1)
+- [MySql](https://www.mysql.it/) (v5.6.33)
 
 
 ## Build & development
