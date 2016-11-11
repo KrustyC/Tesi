@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*8q$*_*uu^95kdr5!1p6cm&nh3$0qs*6&je_$8wg7lfy51=-0^'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -70,9 +70,9 @@ WSGI_APPLICATION = 'tesi.wsgi.application'
 DATABASES = {    
     'default': {    
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sensquare',
-        'USER': 'davidek',           
-        'PASSWORD': 'tesiCRESTINI2016',
+        'NAME': '',
+        'USER': '',           
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }    

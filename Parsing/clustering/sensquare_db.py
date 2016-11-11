@@ -13,7 +13,7 @@ class MyDB(object):
     _db_cur = None
 
     def __init__(self):
-        self._db_connection = MySQLdb.connect("localhost","davidek","tesiCRESTINI2016","sensquare")
+        
         self._db_cur = self._db_connection.cursor()
 
     def store_channel_and_streams(self,channel,streams):
