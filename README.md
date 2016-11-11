@@ -1,22 +1,15 @@
-# HomyPack #
-
+# Sensqaure #
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Django-rest-framework]()(pip install django-rest-framework)
-- [Supervisor](https://github.com/petruisfan/node-supervisor)(npm install -g supervisor) not needed but useful to develop server-side
+- [Django-rest-framework](http://www.django-rest-framework.org/)(pip install django-rest-framework)
 - [MySql](https://www.mysql.it/)
-
-### Developing
 
 
 ## Build & development
 
-Run `python manage.py runserver`.
+Per lanciare la piattaforma baste eseguire il comando `python manage.py runserver` all 'interno della cartella Piattaforma .
+La piattaforma sarà lanciata all'indirizzo localhost:8000.
 
-
-### Guidelines ###
-
-* Read the git manual inside the repository (the manual can be updated with new useful git command)
