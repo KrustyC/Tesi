@@ -11,6 +11,6 @@
 
 ## Build & development
 
-Per lanciare la piattaforma baste eseguire il comando `python manage.py runserver` all 'interno della cartella Piattaforma .
+Per lanciare la piattaforma baste eseguire il comando `python manage.py runserver` all'interno della cartella Piattaforma.
 La piattaforma sarà lanciata all'indirizzo localhost:8000.
 
