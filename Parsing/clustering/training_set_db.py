@@ -13,7 +13,7 @@ class MyDB(object):
     _db_cur = None
 
     def __init__(self):
-        
+        self._db_connection = MySQLdb.connect("localhost","tirocinioLAM","LAM1516!","TestTrainingSet" )
         self._db_cur = self._db_connection.cursor()
 
     def get_training_set_relevant_streams(self):
