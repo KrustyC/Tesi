@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -30,7 +31,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'rest_framework_jwt',
 ]
-
 
 MIDDLEWARE = [
 ]
@@ -78,6 +77,7 @@ DATABASES = {
         'PORT': '3306',
     }    
 }   
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/

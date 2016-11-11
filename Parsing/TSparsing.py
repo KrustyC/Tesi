@@ -5,7 +5,6 @@ from urllib import urlopen
 import json
 import sys
 from urllib2 import HTTPError
-import dbScraping
 
 from clustering import training_set_db, sensquare_db
 from pyxdameraulevenshtein import damerau_levenshtein_distance
@@ -190,27 +189,6 @@ def get_and_classificate(beg,fin):
 		except:
 			print(sys.exc_info()[0])
 
-	
-
-
-def store_channels_in_db(channel):
-	print "-----------------------------STORING CHANNEL ON DB----------------------------------"
-	#database = dbScraping.MyDB()
-
-	try:
-		database.insert_channel(channel['channel_id'],channel['name'],channel['latitude'],channel['longitude'],"ThingSpeak")
-	except UnicodeEncodeError:
-		pass
-	except dbScraping.MySQLdb.IntegrityError:
-		pass
-	except:
-		print(sys.exc_info()[0])
-		pass
-
-	#del database
-
-
-
 if __name__ == "__main__":
 	
 	
@@ -218,6 +196,7 @@ if __name__ == "__main__":
 	fin = int(sys.argv[2])
 	
 	'''
+	#Cosi prendo solo gli stream pubblici (anche se non vengono dati proprio tutti)
 	jj = ""
 	public_channels = []
 	for i in range(2,626):
