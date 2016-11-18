@@ -5,13 +5,13 @@
     .controller('serviceCtrl', serviceCtrl);
 
 
-    serviceCtrl.$inject = ['$location','$routeParams','authentication','djangoData','NgMap','$mdToast','$q'];
+    serviceCtrl.$inject = ['$location','$routeParams','authentication','djangoData','$mdToast','$q'];
 
     function getAddress(title){
         return title.split('-')[1]
     }
 
-    function serviceCtrl ($location,$routeParams,authentication,djangoData,NgMap,$mdToast,$q) {
+    function serviceCtrl ($location,$routeParams,authentication,djangoData,$mdToast,$q) {
 
 		var vm = this;
 

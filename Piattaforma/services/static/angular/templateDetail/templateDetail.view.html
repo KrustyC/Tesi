@@ -54,7 +54,7 @@
 					</div>
 				</md-toolbar>
 				<md-table-container>
-					<table md-table md-row-select multiple ng-model="vm.selected">
+					<table md-table id="mdTable" md-row-select multiple ng-model="vm.selected">
 						<thead md-head md-order="" >
 							<tr md-row>
 								<th md-column >Nome</th>
@@ -65,7 +65,7 @@
 							</tr>
 						</thead>
 						<tbody md-body>
-							<tr md-row md-select="stream.id" md-select-id="stream.id" md-on-select="vm.selectStream" md-on-deselect="vm.deselectStream"  ng-repeat="stream in vm.foundedStreams">
+							<tr id="tr[[stream.id]]" md-row md-select="stream.id" md-select-id="stream.id" md-on-select="vm.selectStream" md-on-deselect="vm.deselectStream" md-auto-select ng-repeat="stream in vm.foundedStreams">
 								<td md-cell>[[stream.name]]</td>
 								<td md-cell>[[stream.data_class]]</td>
 								<td md-cell>[[stream.description]]</td>

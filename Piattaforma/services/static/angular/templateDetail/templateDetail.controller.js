@@ -5,10 +5,10 @@
     .controller('templateDetailCtrl', templateDetailCtrl);
 
 
-    templateDetailCtrl.$inject = ['$location','$routeParams','authentication','djangoData','NgMap','$mdToast','$q'];
+    templateDetailCtrl.$inject = ['$location','$routeParams','authentication','djangoData','$mdToast','$q'];
 
 
-    function templateDetailCtrl ($location,$routeParams,authentication,djangoData,NgMap,$mdToast,$q) {
+    function templateDetailCtrl ($location,$routeParams,authentication,djangoData,$mdToast,$q) {
 
 		var vm = this;
 
@@ -17,6 +17,7 @@
             return;
         }
         
+        vm.keys = []
         vm.neededSensors = [];
         vm.selected = []
         vm.foundedStreams = []
@@ -106,7 +107,7 @@
                             });
 
                             for(var stream in vm.foundedStreams){
-                                addMarker(vm.foundedStreams,stream,map,infowindow)
+                                addMarker(vm.foundedStreams,stream,map,infowindow,vm)
                             }
                         })
                         .error(function (e) {
@@ -120,7 +121,7 @@
                 } 
                 else {
                     $mdToast.show($mdToast.simple()
-                        .textContent('Geocode was not successful for the following reason: ' + status)                       
+                        .textContent('Si è verificato un\'errore nel rilevamento delle mappe. Riprovare.')                       
                         .hideDelay(3000)
                         .theme("error-toast")
                     );
@@ -129,6 +130,11 @@
         }   
 
         
+        selectOnInfoWindow = function(id){
+            var tr =  angular.element( document.querySelector('#tr'+id))
+            var checkbox = tr[0].childNodes[0].childNodes[0]
+            checkbox.click()
+        }
 
         vm.selectStream = function(){
             selectMarker(this.model)

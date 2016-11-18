@@ -104,7 +104,6 @@ function clearMarkers() {
 function selectMarker(id){
     for (var i = 0; i < markersArray.length; i++) {
         if(markersArray[i].id == id){
-
             markersArray[i].marker.setIcon('/static/img/beachflag.png');
         }
     }
@@ -145,14 +144,12 @@ function checkMarker(lat,lng){
 }
 
 /*Funzione per aggiungere un marker alla mappa*/
-function addMarker(foundedStreams,stream,map,infowindow){
+function addMarker(foundedStreams,stream,map,infowindow,vm){
     var contentString = '<div>'+
-        '<div>'+
-        '</div>'+
-        '<h1 >' + foundedStreams[stream].name +'</h1> <div >'+
+        '<h1>' + foundedStreams[stream].name +'</h1> <div >'+
         '<p>'+ foundedStreams[stream].description + '</p>'+
-        '<p><i><b>(Ultimo update: ' + foundedStreams[stream].last_update_timestamp +')</b></i></p>' +
-        '</div>'+
+        '<p><i><b>(Ultimo update: ' + foundedStreams[stream].last_update_timestamp +')</b></i> </p>' +
+        '<button class="fab" onclick="selectOnInfoWindow(' + foundedStreams[stream].id +')"><img class="imgInfo" src="/static/img/icons/ic_mode_edit_white_24dp.png" /></button>' +
         '</div>';                             
    
     var lat = foundedStreams[stream].measurements[0].gps_latitude

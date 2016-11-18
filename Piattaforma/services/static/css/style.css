@@ -302,3 +302,34 @@ md-toast.md-error-toast-theme .md-toast-content{
 md-table-container{
 	max-height: 350px !important;
 }
+
+
+
+/*--------------INFO WINDOW--------------*/
+.infop{
+	font-size: 12px;
+	display: inline;
+}
+
+.fab {
+	 border:none;
+    font-size:14px;
+    color:white;
+    background-color: #2E64FE ;
+    border-radius: 4px;
+    width: 65px;
+    height: 25px;
+    margin: auto;
+    -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+       -moz-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+            box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, .3);
+}
+
+.fab:hover {
+  background-color: #0040FF;
+}
+
+.imgInfo{
+	width: 20px;
+	height: 20px;
+}

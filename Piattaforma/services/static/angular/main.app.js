@@ -1,2 +1,2 @@
 'use strict'
-angular.module('crowdsense', ['ngMaterial','ngRoute','ngMessages', 'material.svgAssetsCache','ngMap','md.data.table']);
+angular.module('crowdsense', ['ngMaterial','ngRoute','ngMessages', 'material.svgAssetsCache','md.data.table']);
