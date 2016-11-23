@@ -1,13 +1,24 @@
 <md-toolbar id="nav-toolbar">
 
     <div class="md-toolbar-tools">
-      <span>Sensquare</span>
+      <span>Crowdservice</span>
 
       <md-button ng-click="navvm.navigateTo('/')">
         Home 
       </md-button>
+
+      <md-button ng-if="location=='home'">
+        <a href="#second-section"> La piattaforma </a>
+      </md-button>
+      <md-button ng-if="location=='home'">
+        <a href="#third-section"> About </a>
+      </md-button>
+      <md-button ng-if="location=='home'">
+        <a href="#fourth-section"> Sviluppo </a>
+      </md-button>
+
       <md-button ng-click="navvm.navigateTo('/profile')" ng-if="navvm.logged">
-        Profilo 
+        Lista schemi 
       </md-button>
       <!-- fill up the space between left and right area -->
       <span flex></span>

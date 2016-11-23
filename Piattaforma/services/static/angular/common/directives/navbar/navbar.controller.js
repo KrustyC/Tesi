@@ -4,11 +4,14 @@
     .module('crowdsense')
     .controller('navbarCtrl', navbarCtrl);
 
-  navbarCtrl.$inject = ['$location','$mdSidenav','$mdDialog','authentication'];
-  function navbarCtrl($location,$mdSidenav,$mdDialog,authentication) {
+  navbarCtrl.$inject = ['$location','$mdSidenav','$mdDialog','authentication','$scope'];
+  function navbarCtrl($location,$mdSidenav,$mdDialog,authentication,$scope) {
     var vm = this;
 
     vm.logged = authentication.isLoggedIn();
+
+    console.log("SUIno")
+    console.log($scope.location)
 
     function performLogin(credentials){
       authentication.login(credentials)

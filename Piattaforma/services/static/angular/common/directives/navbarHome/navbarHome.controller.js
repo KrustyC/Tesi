@@ -10,6 +10,9 @@
 
     vm.logged = authentication.isLoggedIn();
 
+
+    console.log("Madonna troia")
+    console.log($location.path())
      if(!vm.logged){
           $location.path("/#");
           return;
