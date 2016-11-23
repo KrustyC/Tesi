@@ -10,9 +10,6 @@
 
     vm.logged = authentication.isLoggedIn();
 
-    console.log("SUIno")
-    console.log($scope.location)
-
     function performLogin(credentials){
       authentication.login(credentials)
         .error(function(err){
