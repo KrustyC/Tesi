@@ -5,10 +5,9 @@
     .controller('templateDetailCtrl', templateDetailCtrl);
 
 
-    templateDetailCtrl.$inject = ['$location','$routeParams','authentication','djangoData','$mdToast','$q'];
+    templateDetailCtrl.$inject = ['$location','$routeParams','authentication','djangoData','$mdToast','$q','$scope'];
 
-
-    function templateDetailCtrl ($location,$routeParams,authentication,djangoData,$mdToast,$q) {
+    function templateDetailCtrl ($location,$routeParams,authentication,djangoData,$mdToast,$q,$scope) {
 
 		var vm = this;
 
@@ -61,18 +60,30 @@
         });
         
         var geocoder = new google.maps.Geocoder();
-        vm.address = ''
-		
+        
+        google.maps.event.addListener(map, 'click', function(event) {
+          geocoder.geocode({'latLng': event.latLng}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              if (results[0]) {
+                $scope.address = results[0].formatted_address
+                $scope.$apply()
+              }
+            }
+          });
+        });
+
+
+        
         vm.goBack = function(){
             $location.path("/profile");   
         }
 
         vm.onSubmit = function(){
             vm.selected = []
-            currentAddress = vm.address
+            currentAddress = $scope.address
             clearMarkers()
             currentLatLng = null
-            geocoder.geocode({'address': vm.address}, function(results, status) {
+            geocoder.geocode({'address': $scope.address}, function(results, status) {
                 if (status === 'OK') {
                     
                     currentLatLng = [results[0].geometry.location.lat(),results[0].geometry.location.lng()]

@@ -27,13 +27,14 @@
 			    <p> [[ vm.currentTemplate.expression ]]</p>
 			    
 			</md-content>
+					[[ vm.address]]
 			<md-content class="md-padding" layout="column">
 		  	<form layout layout-align="center" ng-submit="vm.onSubmit()" >
 				<div layout="row" flex>
 					<md-input-container flex class="md-icon-float md-block md-title">
 						<md-icon style="color: #3781BF; height: 26px; width: 26px;" md-svg-src="img/icons/ic_place_24px.svg"></md-icon>
 						<label>Dove vorresti instanziare il servizio?</label>
-						<input type="text" ng-model="vm.address">
+						<input type="text" ng-model="address"  >
 					</md-input-container>
 					<div>
 						<md-button class="md-raised md-confirm-button" type="submit">
